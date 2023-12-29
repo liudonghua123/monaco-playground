@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js",
-    "build": "tsc && node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js build",
-    "preview": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js preview"
+    "dev": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js --base=./",
+    "build": "tsc && node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js build --base=./",
+    "preview": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js preview --base=./"
   },
   "devDependencies": {
     "@types/vscode": "^1.83.0",
