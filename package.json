@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js",
+    "build": "tsc && node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js build",
+    "preview": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js preview"
   },
   "devDependencies": {
     "@types/vscode": "^1.83.0",
@@ -25,11 +25,12 @@
     "@codingame/monaco-vscode-theme-service-override": "^1.83.16",
     "@typefox/pyright-browser": "^1.1.299",
     "jszip": "^3.10.1",
-    "monaco-editor": "^0.44.0",
+    "monaco-editor": "npm:@codingame/monaco-editor-treemended@>=1.83.16 <1.84.0",
     "monaco-editor-workers": "^0.44.0",
     "monaco-languageclient": "^7.2.0",
     "vscode-languageclient": "^9.0.1",
-    "vscode-languageserver": "^9.0.1"
+    "vscode-languageserver": "^9.0.1",
+    "vscode": "npm:@codingame/monaco-vscode-api@>=1.83.16 <1.84.0"
   },
   "overrides": {
     "monaco-editor": "$monaco-editor",

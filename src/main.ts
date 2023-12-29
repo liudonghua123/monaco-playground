@@ -210,7 +210,7 @@ export const startPythonClient = async () => {
     modelRef.object.setLanguageId(languageId);
 
     // create monaco editor
-    createConfiguredEditor(document.getElementById('container')!, {
+    createConfiguredEditor(document.getElementById('app')!, {
         model: modelRef.object.textEditorModel,
         automaticLayout: true
     });

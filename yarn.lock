@@ -522,11 +522,6 @@ monaco-editor@0.44.0, "monaco-editor@npm:@codingame/monaco-editor-treemended@>=1
   resolved "https://registry.npmmirror.com/@codingame/monaco-editor-treemended/-/monaco-editor-treemended-1.83.16.tgz#44f1c4bdc7884d80a37b5b28970a5fd2c1e5e179"
   integrity sha512-KS89o9zxphQqjQgZgpTDiHZNKCFxRpQdiDVkEfJGfNc83r5GbtTlIXA7RqtUSy55F+K5Bb3ua2WvrbwUGcZqBg==
 
-monaco-editor@^0.44.0:
-  version "0.44.0"
-  resolved "https://registry.npmmirror.com/monaco-editor/-/monaco-editor-0.44.0.tgz#3c0fe3655923bbf7dd647057302070b5095b6c59"
-  integrity sha512-5SmjNStN6bSuSE5WPT2ZV+iYn1/yI9sd4Igtk23ChvqB7kDk9lZbB9F5frsuvpB+2njdIeGGFf2G4gbE6rCC9Q==
-
 monaco-languageclient@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npmmirror.com/monaco-languageclient/-/monaco-languageclient-7.2.0.tgz#14a2891098789b614f555241aeadfb4032e20ee8"
