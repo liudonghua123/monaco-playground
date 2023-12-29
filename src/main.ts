@@ -99,8 +99,8 @@ const createLanguageClient = (transports: MessageTransports): MonacoLanguageClie
 export const startPythonClient = async () => {
     // read typeshed stdlib.zip file
     // files = await readZipFile(new URL('./stdlib.zip', window.location.href).href);
-    console.log('readZipFile typeshed.zip');
-    files = await readZipFile(new URL('./typeshed.zip', window.location.href).href);
+    console.log('readZipFile stdlib-source-with-typeshed-pyi.zip');
+    files = await readZipFile(new URL('./stdlib-source-with-typeshed-pyi.zip', window.location.href).href);
     console.log('starting initServices ...');
     // init vscode-api
     await initServices({
