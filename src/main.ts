@@ -50,7 +50,7 @@ async function readZipFile(url: string) {
             // filename = filename.replace(/^stdlib/, '/workspace/typings');
             filename = filename.replace(/^(stdlib|stubs)/, '/$1');
             // filename = filename.replace(/^(stdlib|stubs)/, '/workspace/$1');
-            console.info(`Reading ${filename}`);
+            // console.info(`Reading ${filename}`);
             results[filename] = await file.async('text');
         }
         console.info(`Read ${Object.keys(results).length} files`);
