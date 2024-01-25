@@ -23,7 +23,7 @@ import * as JSZip from 'jszip';
 
 import { buildWorkerDefinition } from 'monaco-editor-workers';
 // TODO: fix the workers path, maybe need to configure the bundler to copy the workers files
-buildWorkerDefinition('monaco-editor-workers/dist/workers/', new URL('', window.location.href).href, false);
+buildWorkerDefinition('monaco-editor-workers/dist/workers', new URL('', window.location.href).href, false);
 
 const languageId = 'python';
 let languageClient: MonacoLanguageClient;
@@ -178,7 +178,8 @@ export const startPythonClient = async () => {
     fileSystemProvider.registerFile(new RegisteredMemoryFile(vscode.Uri.file('/workspace/hello.py'), 'print("Hello, World!")'));
     registerFileSystemOverlay(1, fileSystemProvider);
 
-    const pythonWorkerUrl = new URL('../../node_modules/@typefox/pyright-browser/dist/pyright.worker.js', window.location.href).href;
+    const pythonWorkerUrl = new URL('./@typefox/pyright-browser/dist/pyright.worker.js', window.location.href).href;
+    console.info(`main.ts, pythonWorkerUrl: ${pythonWorkerUrl}`);
     const worker = new Worker(pythonWorkerUrl);
     worker.postMessage({
         type: 'browser/boot',

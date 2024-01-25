@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import * as path from 'path';
 import * as fs from 'fs';
 import url from 'url';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig(() => {
     const config = {
@@ -52,7 +53,22 @@ export default defineConfig(() => {
         },
         define: {
             rootDirectory: JSON.stringify(__dirname)
-        }
+        },
+        base: './',
+        plugins: [
+            viteStaticCopy({
+                targets: [
+                  {
+                    src: 'node_modules/@typefox',
+                    dest: './',
+                  },
+                  {
+                    src: 'node_modules/monaco-editor-workers',
+                    dest: './',
+                  },
+                ],
+            }),
+        ]
     };
     return config;
 });

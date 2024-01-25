@@ -9,11 +9,12 @@
     "preview": "node --experimental-import-meta-resolve ./node_modules/vite/bin/vite.js preview --base=./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
     "@types/node": "*",
+    "@types/vscode": "^1.83.0",
+    "ts-node": "~10.9.1",
     "typescript": "~5.3.3",
     "vite": "^5.0.8",
-    "ts-node": "~10.9.1",
+    "vite-plugin-static-copy": "^1.0.1",
     "vscode-languageserver-types": "~3.17.5"
   },
   "dependencies": {
@@ -28,9 +29,9 @@
     "monaco-editor": "npm:@codingame/monaco-editor-treemended@>=1.83.16 <1.84.0",
     "monaco-editor-workers": "^0.44.0",
     "monaco-languageclient": "^7.2.0",
+    "vscode": "npm:@codingame/monaco-vscode-api@>=1.83.16 <1.84.0",
     "vscode-languageclient": "^9.0.1",
-    "vscode-languageserver": "^9.0.1",
-    "vscode": "npm:@codingame/monaco-vscode-api@>=1.83.16 <1.84.0"
+    "vscode-languageserver": "^9.0.1"
   },
   "overrides": {
     "monaco-editor": "$monaco-editor",
